@@ -1,0 +1,49 @@
+# ----------------------------------------------------------------------
+# SECURITY & CREDENTIALS (ข้อมูลลับ - ห้าม Commit เด็ดขาด)
+
+# Database Credentials
+.env
+.flaskenv
+
+# Google Service Account Key 
+files/service-account-key.json
+files/depression_data.csv
+pg_data/
+
+# DATA FILES (ไฟล์ข้อมูลขนาดใหญ่)
+
+files/*.csv
+*.csv
+
+# Virtual Environment Folders
+venv/
+.venv/
+env/
+.env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Log files
+*.log
+
+# Docker volumes
+pgdata/
+
+# SQLite or local DB files (ถ้ามี)
+*.sqlite3
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# Office/Temporary documents
+*.docx
+*.xlsx
+*.pptx
+*.pdf
+
+# ----------------------------------------------------------------------
