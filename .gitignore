@@ -7,7 +7,6 @@
 
 # Google Service Account Key 
 files/service-account-key.json
-pg_data/
 
 # Virtual Environment Folders
 venv/
