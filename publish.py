@@ -42,6 +42,7 @@ def execute_publish(df, spreadsheet_name, worksheet_name, key_filename):
     if not os.path.exists(key_filename):
         raise FileNotFoundError(f"Service Account Key file not found: {key_filename}")
 
+    # ทำความสะอาดข้อมูลเบื้องต้นที่ google sheet ไม่รองรับ
     df = df.replace([np.inf, -np.inf], np.nan)
     df = df.fillna('') 
 
@@ -68,11 +69,13 @@ def execute_publish(df, spreadsheet_name, worksheet_name, key_filename):
 
         all_values = [df.columns.values.tolist()] + df.values.tolist()
         
+        # กำหนดขนาดของแต่ละชุดข้อมูลที่จะอัปโหลด
         batch_size = 30000
         total_batches = (len(all_values) // batch_size) + 1
         
         print(f"[Publish] Uploading in {total_batches} batches.")
 
+        # แบ่งชุดข้อมูลและอัปโหลดทีละชุด
         for i in range(total_batches):
             start_row_idx = i * batch_size
             end_row_idx = min((i + 1) * batch_size, len(all_values))
