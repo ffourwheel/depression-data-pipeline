@@ -7,7 +7,6 @@
 
 # Google Service Account Key 
 files/service-account-key.json
-files/depression_data.csv
 pg_data/
 
 # DATA FILES (ไฟล์ข้อมูลขนาดใหญ่)
