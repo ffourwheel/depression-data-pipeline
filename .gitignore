@@ -9,11 +9,6 @@
 files/service-account-key.json
 pg_data/
 
-# DATA FILES (ไฟล์ข้อมูลขนาดใหญ่)
-
-files/*.csv
-*.csv
-
 # Virtual Environment Folders
 venv/
 .venv/
