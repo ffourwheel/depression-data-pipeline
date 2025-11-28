@@ -76,7 +76,7 @@ def execute_transform(raw_table_name, clean_table_name):
     df_final = pd.merge(df, df_stats, on=['age_group', 'marital_status'], how='left')
 
     try:
-        print(f"[Transform] Saving {len(df_final)} rows to DB (Turbo Mode)...")
+        print(f"[Transform] Saving {len(df_final)} rows to DB.")
         df_final.to_sql(
             clean_table_name, 
             engine, 
